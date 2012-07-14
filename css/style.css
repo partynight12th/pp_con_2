@@ -10,16 +10,20 @@ body{
 
 div#wrap{
 	width:900px;
-	margin:0 auto;
+	margin:20px auto;
+}
+
+#wrap > .left{
+	float:left;
+	width:200px;
 }
 
 header{
 	font-size:3.2em;
+	margin-bottom:20px;
 }
 
 nav{
-	float:left;
-	width:200px;
 	font-size:1.4em;
 	font-weight:bold;
 }
@@ -31,13 +35,19 @@ nav ul{
 nav ul li{
 	background-color:#333;
 	border:1px solid #cccccc;
-	padding:1em 1em;
-	width:150px;
+	width:170px;
 	margin-bottom:1px;
 	color:#fff;
 }
 
+nav ul li:hover{
+	background-color: #fff;
+	color:#333;
+}
+
 nav ul li a {
+	padding:1em 1em;
+	display:block;
 	color:#fff;
 	text-decoration:none;
 }
@@ -47,7 +57,17 @@ nav ul li a:visited {
 }
 
 nav ul li a:hover {
-	color:#FF0000;
+	color:#333;
+	text-decoration:underline;
+}
+
+nav ul li.current{
+	background-color: #fff;
+	color:#333;
+}
+
+nav ul li.current a{
+	color:#333;
 	text-decoration:underline;
 }
 
@@ -58,10 +78,14 @@ div#main{
 }
 
 div#main div.img{
-	height:200px;
-	background: url("../images/ph1.jpg") no-repeat center center;
+	height:280px;
+	background: url("../images/ph2.png") no-repeat center center;
 	background-size:cover; 
-	margin-bottom:30px;
+	margin-bottom:20px;
+}
+
+div#main p{
+	margin-bottom:1em;
 }
 
 hr{
