@@ -6,6 +6,7 @@
 body{
 	font-size:62.5%;
 	color:#333;
+	overflow-y: scroll;
 }
 
 div#wrap{
@@ -38,6 +39,7 @@ nav ul li{
 	width:170px;
 	margin-bottom:1px;
 	color:#fff;
+	cursor:pointer;
 }
 
 nav ul li:hover{
@@ -45,11 +47,18 @@ nav ul li:hover{
 	color:#333;
 }
 
-nav ul li a {
+nav ul li span{
 	padding:1em 1em;
 	display:block;
-	color:#fff;
+}
+
+nav ul li span:hover{
+	text-decoration:underline;
+}
+
+nav ul li a {
 	text-decoration:none;
+	color:#fff;
 }
 
 nav ul li a:visited {
@@ -58,7 +67,6 @@ nav ul li a:visited {
 
 nav ul li a:hover {
 	color:#333;
-	text-decoration:underline;
 }
 
 nav ul li.current{
@@ -100,4 +108,8 @@ div#footer{
 div#footer div{
 	float:left;
 	width:100px;
+}
+
+.hidden{
+	display:none;
 }
