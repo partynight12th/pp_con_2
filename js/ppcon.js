@@ -10,18 +10,18 @@ $(function(){
 	ppcon.contentsswap = function(page){
 		console.log(page);
 
-		page = page.replace(/\#_/,"");
+		page = page.replace(/\#!/,"") || "about";
 
-		var target = $("." + page);
+		var target = this.c$.find("." + page);
 		if(target.length > 0){
-			ppcon.c$.find("div").addClass("hidden");
-			ppcon.c$.find("." + page).removeClass("hidden");
-			ppcon.c$.slideDown("fast");
+			this.c$.find("div").addClass("hidden");
+			target.removeClass("hidden");
+			this.c$.slideDown("fast");
 		}
 
 		var navtarget =$("#" + page);
 		if(navtarget.length > 0){
-			ppcon.navs$.removeClass("current");
+			this.navs$.removeClass("current");
 			navtarget.addClass("current");
 		}
 	}
@@ -35,7 +35,7 @@ $(function(){
 
 			ppcon.c$.slideUp("fast", function(){ppcon.contentsswap(page)});
 			
-			location.hash = "#_" + page;
+			location.hash = "#!" + page;
 		});
 	});
 });
